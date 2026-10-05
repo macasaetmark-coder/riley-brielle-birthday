@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Riley Brielle • 7th Birthday</title>
+<style>
+:root{--purple:#4e2a6c;--pink:#d86ca8;--gold:#c79b4b;--cream:#fff9f6}
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:#24172e;color:var(--purple);font-family:Georgia,"Times New Roman",serif;overflow:hidden}
+#book{height:100dvh;width:100%;position:relative}
+.page{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:18px;opacity:0;visibility:hidden;transform:translateX(24px);transition:opacity .45s,transform .45s}
+.page.active{opacity:1;visibility:visible;transform:none}
+.page:before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(1.02)}
+.p1:before{background-image:url("bg1.png")}.p2:before,.p3:before,.p4:before,.p5:before,.p6:before,.p7:before,.p8:before{background-image:url("bg2.png")}
+.panel{position:relative;width:min(94vw,560px);height:min(96dvh,930px);overflow:auto;border:2px solid rgba(199,155,75,.75);border-radius:28px;background:rgba(255,249,246,.86);box-shadow:0 18px 60px rgba(0,0,0,.4);padding:30px 24px}
+.cover .panel{background:linear-gradient(180deg,rgba(37,18,52,.18),rgba(255,240,248,.16));color:white;text-shadow:0 2px 8px #38204b;border-color:rgba(255,240,248,.7)}
+h1,h2,h3{text-align:center;margin:.15em 0 .35em;letter-spacing:.035em}
+h1{font-size:clamp(34px,8vw,62px)}h2{font-size:clamp(28px,6vw,44px)}h3{font-size:22px}
+.sub{text-align:center;font-style:italic;font-size:18px;line-height:1.5}
+.gold{height:2px;width:70%;margin:16px auto 20px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.btn{width:94%;display:block;margin:11px auto;padding:14px 16px;border-radius:28px;border:1px solid #a879bd;background:linear-gradient(90deg,#f6e4f4,#f9e9ef);color:#4d2866;font:bold 15px Arial,sans-serif;letter-spacing:.03em;box-shadow:0 4px 14px #5c37601f;cursor:pointer}
+.btn:active{transform:scale(.99)}
+.info{padding:13px 15px;margin:12px 0;border-radius:18px;background:rgba(249,234,247,.78);border:1px solid #b98cc8;text-align:center;font-size:18px;line-height:1.45}
+.info b{display:block;font:700 13px Arial,sans-serif;letter-spacing:.08em;color:#6b377f;margin-bottom:5px}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:18px 0}
+.photo{aspect-ratio:1/1.08;border:2px solid #c99bd0;border-radius:18px;overflow:hidden;background:#f8eaf5}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.wide{grid-column:1/-1;aspect-ratio:16/9}
+.quote{text-align:center;font-size:20px;font-style:italic;line-height:1.45;color:#683b78}
+.small{font:12px Arial,sans-serif;text-align:center;opacity:.72}
+.back{position:absolute;top:12px;left:13px;border:0;background:#fff9;border-radius:18px;padding:7px 12px;color:#4e2a6c;cursor:pointer;z-index:2}
+#top{position:fixed;top:10px;right:10px;z-index:30;display:flex;gap:7px}
+.topbtn{border:0;border-radius:18px;padding:7px 11px;background:#fff9;color:#4e2a6c;font:700 12px Arial,sans-serif}
+#nav{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);z-index:30;background:#281936c9;border-radius:24px;padding:6px 10px;display:flex;align-items:center;gap:8px}
+#nav button{border:0;background:transparent;color:white;font-size:20px;cursor:pointer}
+#dots{color:white;font:11px Arial,sans-serif;letter-spacing:2px}
+.butterfly{position:fixed;z-index:20;pointer-events:none;font-size:24px;opacity:.65;animation:rise 9s linear infinite}
+@keyframes rise{from{transform:translateY(110vh) rotate(0deg)}to{transform:translateY(-15vh) rotate(360deg)}}
+.cover .spacer{height:22vh}
+@media(max-height:720px){.panel{padding:22px 18px}.btn{padding:10px}.info{padding:9px}.photos{gap:7px}}
+</style>
+</head>
+<body>
+<div id="book">
+  <div id="top"><button class="topbtn" onclick="home()">⌂ Home</button></div>
+  <span class="butterfly" style="left:7%;animation-delay:0s">🦋</span>
+  <span class="butterfly" style="left:29%;animation-delay:2s">🦋</span>
+  <span class="butterfly" style="left:54%;animation-delay:5s">🦋</span>
+  <span class="butterfly" style="left:80%;animation-delay:1s">🦋</span>
+
+  <section class="page p1 cover active" id="page1">
+    <div class="panel">
+      <div class="spacer"></div>
+      <h3>YOU'RE INVITED</h3>
+      <h1>RILEY BRIELLE</h1>
+      <h2>7TH BIRTHDAY</h2>
+      <div class="gold"></div>
+      <p class="sub">A magical day filled with butterflies, flowers, fun & friendship.</p>
+      <div class="spacer"></div>
+      <button class="btn" onclick="show(2)">🦋 TAP TO ENTER 🦋</button>
+    </div>
+  </section>
+
+  <section class="page p2" id="page2">
+    <div class="panel">
+      <h2>MEET RILEY</h2><div class="gold"></div>
+      <p class="sub">A little about our birthday girl</p>
+      <div class="photos">
+        <div class="photo"><img src="riley1.jpg"></div>
+        <div class="photo"><img src="riley2.jpg"></div>
+        <div class="photo wide"><img src="riley4.jpg"></div>
+      </div>
+      <p class="quote">Sweet • Bright • Curious • Full of Joy</p>
+      <p class="sub">Riley is turning 7! Come celebrate another wonderful year filled with laughter, love, and magical memories.</p>
+      <button class="btn" onclick="show(3)">NEXT ✦</button>
+    </div>
+  </section>
+
+  <section class="page p3" id="page3">
+    <div class="panel">
+      <h2>A MAGICAL<br>CELEBRATION AWAITS</h2><div class="gold"></div>
+      <h2 style="font-size:30px">RILEY BRIELLE<br>IS TURNING 7!</h2>
+      <p class="sub">You're invited to join us for a magical birthday celebration filled with laughter, games, sweet treats, and wonderful memories!</p>
+      <div class="info"><b>THE CELEBRATION</b>Sunday • November 29, 2026</div>
+      <div class="info"><b>TIME</b>2:00 PM</div>
+      <div class="info"><b>VENUE</b>Villa Maharlika Clubhouse<br>Villa Maharlika Subdivision<br>Lanzones Street, San Jose, Batangas</div>
+      <button class="btn" onclick="show(4)">LET'S CELEBRATE ✦</button>
+    </div>
+  </section>
+
+  <section class="page p4" id="page4">
+    <div class="panel">
+      <h2>LET'S CELEBRATE!</h2>
+      <p class="sub">Come make magical memories with Riley!</p><div class="gold"></div>
+      <button class="btn" onclick="show(5)">🎮 GAMES & FUN</button>
+      <button class="btn" onclick="show(6)">🍰 SWEET TREATS</button>
+      <button class="btn" onclick="show(7)">🦋 BIRTHDAY SURPRISES</button>
+      <button class="btn" onclick="show(8)">⭐ LOTS OF LAUGHTER</button>
+      <p class="small">Tap a button to explore the celebration.</p>
+    </div>
+  </section>
+
+  <section class="page p5" id="page5">
+    <div class="panel"><button class="back" onclick="show(4)">← Menu</button>
+      <h2>GAMES & FUN</h2><div class="gold"></div>
+      <p class="sub">Get ready for playful moments, friendly challenges, and plenty of reasons to smile!</p>
+      <div class="photos"><div class="photo"><img src="riley3.jpg"></div><div class="photo"><img src="riley5.jpg"></div></div>
+      <div class="info"><b>PLAY • LAUGH • CHEER</b>Bring your biggest smiles and your best party spirit.</div>
+      <p class="quote">The best memories are made when we play together.</p>
+    </div>
+  </section>
+
+  <section class="page p6" id="page6">
+    <div class="panel"><button class="back" onclick="show(4)">← Menu</button>
+      <h2>SWEET TREATS</h2><div class="gold"></div>
+      <p class="sub">A birthday celebration wouldn't be complete without delicious little surprises!</p>
+      <div class="photos"><div class="photo"><img src="riley6.jpg"></div><div class="photo"><img src="riley2.jpg"></div></div>
+      <p class="quote">Sweet treats, sweet memories, sweet Riley! 🍰</p>
+    </div>
+  </section>
+
+  <section class="page p7" id="page7">
+    <div class="panel"><button class="back" onclick="show(4)">← Menu</button>
+      <h2>BIRTHDAY SURPRISES</h2><div class="gold"></div>
+      <p class="sub">There may be a few magical surprises waiting for Riley and her friends...</p>
+      <div class="photos"><div class="photo"><img src="riley4.jpg"></div><div class="photo"><img src="riley6.jpg"></div></div>
+      <p class="quote">🦋 Keep your eyes open for a little birthday magic! 🦋</p>
+    </div>
+  </section>
+
+  <section class="page p8" id="page8">
+    <div class="panel"><button class="back" onclick="show(4)">← Menu</button>
+      <h2>LOTS OF LAUGHTER</h2><div class="gold"></div>
+      <p class="sub">Most importantly, come ready to laugh, make new memories, and celebrate Riley's big 7th birthday!</p>
+      <div class="photos"><div class="photo"><img src="riley1.jpg"></div><div class="photo"><img src="riley5.jpg"></div></div>
+      <button class="btn" onclick="show(9)">RSVP ✦</button>
+    </div>
+  </section>
+
+  <section class="page p3" id="page9">
+    <div class="panel">
+      <h2>JOIN THE MAGIC</h2><div class="gold"></div>
+      <p class="sub">We'd love to celebrate Riley's 7th birthday with you!</p>
+      <button class="btn" onclick="rsvp('YES! I’ll be there!')">💜 YES! I'LL BE THERE</button>
+      <button class="btn" onclick="rsvp('Maybe — I’ll let you know.')">🦋 MAYBE</button>
+      <button class="btn" onclick="rsvp('Sorry, I can’t make it.')">🌸 CAN'T MAKE IT</button>
+      <div class="info"><b>EVENT</b>November 29, 2026 • 2:00 PM<br>Villa Maharlika Clubhouse</div>
+      <button class="btn" onclick="maps()">📍 OPEN LOCATION</button>
+      <button class="btn" onclick="show(10)">MEMORY LANE ✦</button>
+    </div>
+  </section>
+
+  <section class="page p2" id="page10">
+    <div class="panel">
+      <h2>MEMORY LANE</h2><div class="gold"></div>
+      <p class="sub">A few favorite moments with Riley.</p>
+      <div class="photos">
+        <div class="photo"><img src="riley1.jpg"></div><div class="photo"><img src="riley2.jpg"></div>
+        <div class="photo"><img src="riley3.jpg"></div><div class="photo"><img src="riley5.jpg"></div>
+        <div class="photo wide"><img src="riley4.jpg"></div>
+      </div>
+      <button class="btn" onclick="show(11)">ONE LAST THING ✦</button>
+    </div>
+  </section>
+
+  <section class="page p1 cover" id="page11">
+    <div class="panel">
+      <div class="spacer"></div>
+      <h2>THANK YOU</h2><div class="gold"></div>
+      <p class="quote" style="color:white">May your seventh year be filled with wonder, kindness, laughter, and beautiful adventures.</p>
+      <h2>HAPPY 7TH, RILEY! 🦋</h2>
+      <p class="sub">We can't wait to celebrate with you.</p>
+      <div class="spacer"></div>
+      <button class="btn" onclick="show(1)">↺ START AGAIN</button>
+    </div>
+  </section>
+
+  <div id="nav"><button onclick="prev()">‹</button><span id="dots"></span><button onclick="next()">›</button></div>
+</div>
+<script>
+let current=1,total=11;
+function show(n){current=n;document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page'+n).classList.add('active');updateDots()}
+function updateDots(){let s='';for(let i=1;i<=total;i++)s+=i===current?'● ':'○ ';document.getElementById('dots').textContent=s.trim()}
+function next(){show(Math.min(total,current+1))}
+function prev(){show(Math.max(1,current-1))}
+function home(){show(1)}
+function rsvp(msg){alert(msg)}
+function maps(){let q=encodeURIComponent('Villa Maharlika Clubhouse, Villa Maharlika Subdivision, Lanzones Street, San Jose, Batangas');window.open('https://www.google.com/maps/search/?api=1&query='+q,'_blank')}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')next();if(e.key==='ArrowLeft')prev()})
+updateDots()
+</script>
+</body>
+</html>
