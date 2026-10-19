@@ -49,6 +49,15 @@ h1{font-size:clamp(34px,8vw,62px)}h2{font-size:clamp(28px,6vw,44px)}h3{font-size
 #dots{color:white;font:11px Arial,sans-serif;letter-spacing:2px}
 .butterfly{position:fixed;z-index:20;pointer-events:none;font-size:24px;opacity:.65;animation:rise 9s linear infinite}
 @keyframes rise{from{transform:translateY(110vh) rotate(0deg)}to{transform:translateY(-15vh) rotate(360deg)}}
+
+.sevens-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.seven-card{border:1px solid #c99bd0;border-radius:17px;padding:13px 12px;background:rgba(249,234,247,.82);min-width:0}
+.seven-card h3{font-size:17px;line-height:1.2;color:#6b377f;margin:0 0 9px;font-family:Arial,sans-serif;letter-spacing:.035em}
+.seven-card ol{margin:0;padding-left:23px;font:14px/1.45 Arial,sans-serif;color:#4e2a6c}
+.seven-card li{padding:2px 0;overflow-wrap:anywhere}
+.seven-card:last-child{grid-column:1/-1}
+@media(max-width:430px){.sevens-grid{grid-template-columns:1fr;gap:9px}.seven-card:last-child{grid-column:auto}.seven-card{padding:12px}.seven-card h3{font-size:16px}.seven-card ol{font-size:14px}}
+
 .cover .spacer{height:22vh}
 @media(max-height:720px){.panel{padding:22px 18px}.btn{padding:10px}.info{padding:9px}.photos{gap:7px}}
 </style>
@@ -109,24 +118,51 @@ h1{font-size:clamp(34px,8vw,62px)}h2{font-size:clamp(28px,6vw,44px)}h3{font-size
       <div class="info"><b>THE CELEBRATION</b>Sunday • November 29, 2026</div>
       <div class="info"><b>TIME</b>2:00 PM</div>
       <div class="info"><b>VENUE</b>Villa Maharlika Clubhouse<br>Villa Maharlika Subdivision<br>Lanzones Street, San Jose, Batangas</div>
-      <button class="btn" onclick="show(4)">LET'S CELEBRATE ✦</button>
+      <button class="btn" onclick="show(5)">LET'S CELEBRATE ✦</button>
     </div>
   </section>
 
-  <section class="page p4" id="page4">
+  <section class="page p2" id="page4">
+    <div class="panel"><button class="back" onclick="show(3)">← RSVP</button>
+      <h2>THE 7'S</h2><div class="gold"></div>
+      <p class="sub">Seven special people in each birthday tradition, celebrating Riley's magical 7th birthday.</p>
+      <div class="sevens-grid">
+        <div class="seven-card"><h3>🕯️ 7 CANDLES</h3><ol>
+          <li>Tita Nestle Sanchez</li><li>Tita May Tapia</li><li>Tita Jojie Hernandez</li><li>Sophie Alday</li><li>Nora Comia</li><li>Alexa Charm Velasco</li><li>Lolay Malou Bonita</li>
+        </ol></div>
+        <div class="seven-card"><h3>💌 7 WISHES</h3><ol>
+          <li>Ate Brianna Jayne Sabalvaro</li><li>Ninang Sarrah Mercado</li><li>Tita Allen Leyesa</li><li>Jodee Mae Hernandez</li><li>Lola Ofelia Macasaet</li><li>Lola Norma Sabalvaro</li><li>Mama Jocelyn Sabalvaro</li>
+        </ol></div>
+        <div class="seven-card"><h3>💎 7 TREASURES</h3><ol>
+          <li>Tita Tonette Villanueva</li><li>Lola Lita Exconde</li><li>Alexander Chase Exconde</li><li>Tita Mhau Alvarez</li><li>Ellie Alvarez</li><li>Blair Alday</li><li>Maria Lucia Elise Castromero</li>
+        </ol></div>
+        <div class="seven-card"><h3>💵 7 GREEN BILLS</h3><ol>
+          <li>Ninong Vinson Alday</li><li>Ninong Don2 Alvarez</li><li>Tita Claudette Alday</li><li>Ninong Paulo Mercado</li><li>Lolo Meo Guce</li><li>Tita Charmaine Sabalvaro</li><li>Ninang Analyn Sabalvaro</li>
+        </ol></div>
+        <div class="seven-card"><h3>🌹 7 ROSES</h3><ol>
+          <li>Kuya Chant Alexis Velasco</li><li>Tito Joseph Alday</li><li>Kuya Kyle Alday</li><li>Kuya Gaj Alday</li><li>Lolo Clifford Macasaet</li><li>Lolo Pete Sabalvaro</li><li>Daddy Mark Anthony Macasaet</li>
+        </ol></div>
+      </div>
+      <p class="quote">Thank you to the special people making Riley's seventh birthday unforgettable. 🦋</p>
+      <button class="btn" onclick="show(11)">HAPPY 7TH, RILEY! ✦</button>
+      <button class="btn" onclick="show(3)">BACK TO RSVP</button>
+    </div>
+  </section>
+
+  <section class="page p4" id="page5">
     <div class="panel">
       <h2>LET'S CELEBRATE!</h2>
       <p class="sub">Come make magical memories with Riley!</p><div class="gold"></div>
-      <button class="btn" onclick="show(5)">🎮 GAMES & FUN</button>
-      <button class="btn" onclick="show(6)">🍰 SWEET TREATS</button>
-      <button class="btn" onclick="show(7)">🦋 BIRTHDAY SURPRISES</button>
-      <button class="btn" onclick="show(8)">⭐ LOTS OF LAUGHTER</button>
+      <button class="btn" onclick="show(6)">🎮 GAMES & FUN</button>
+      <button class="btn" onclick="show(7)">🍰 SWEET TREATS</button>
+      <button class="btn" onclick="show(8)">🦋 BIRTHDAY SURPRISES</button>
+      <button class="btn" onclick="show(9)">⭐ LOTS OF LAUGHTER</button>
       <p class="small">Tap a button to explore the celebration.</p>
     </div>
   </section>
 
-  <section class="page p5" id="page5">
-    <div class="panel"><button class="back" onclick="show(4)">← Menu</button>
+  <section class="page p5" id="page6">
+    <div class="panel"><button class="back" onclick="show(5)">← Menu</button>
       <h2>GAMES & FUN</h2><div class="gold"></div>
       <p class="sub">Get ready for playful moments, friendly challenges, and plenty of reasons to smile!</p>
       <div class="photos"><div class="photo"><img src="riley3.jpg"></div><div class="photo"><img src="riley5.jpg"></div></div>
@@ -135,8 +171,8 @@ h1{font-size:clamp(34px,8vw,62px)}h2{font-size:clamp(28px,6vw,44px)}h3{font-size
     </div>
   </section>
 
-  <section class="page p6" id="page6">
-    <div class="panel"><button class="back" onclick="show(4)">← Menu</button>
+  <section class="page p6" id="page7">
+    <div class="panel"><button class="back" onclick="show(5)">← Menu</button>
       <h2>SWEET TREATS</h2><div class="gold"></div>
       <p class="sub">A birthday celebration wouldn't be complete without delicious little surprises!</p>
       <div class="photos"><div class="photo"><img src="riley6.jpg"></div><div class="photo"><img src="riley2.jpg"></div></div>
@@ -144,8 +180,8 @@ h1{font-size:clamp(34px,8vw,62px)}h2{font-size:clamp(28px,6vw,44px)}h3{font-size
     </div>
   </section>
 
-  <section class="page p7" id="page7">
-    <div class="panel"><button class="back" onclick="show(4)">← Menu</button>
+  <section class="page p7" id="page8">
+    <div class="panel"><button class="back" onclick="show(5)">← Menu</button>
       <h2>BIRTHDAY SURPRISES</h2><div class="gold"></div>
       <p class="sub">There may be a few magical surprises waiting for Riley and her friends...</p>
       <div class="photos"><div class="photo"><img src="riley4.jpg"></div><div class="photo"><img src="riley6.jpg"></div></div>
@@ -153,16 +189,16 @@ h1{font-size:clamp(34px,8vw,62px)}h2{font-size:clamp(28px,6vw,44px)}h3{font-size
     </div>
   </section>
 
-  <section class="page p8" id="page8">
-    <div class="panel"><button class="back" onclick="show(4)">← Menu</button>
+  <section class="page p8" id="page9">
+    <div class="panel"><button class="back" onclick="show(5)">← Menu</button>
       <h2>LOTS OF LAUGHTER</h2><div class="gold"></div>
       <p class="sub">Most importantly, come ready to laugh, make new memories, and celebrate Riley's big 7th birthday!</p>
       <div class="photos"><div class="photo"><img src="riley1.jpg"></div><div class="photo"><img src="riley5.jpg"></div></div>
-      <button class="btn" onclick="show(9)">RSVP ✦</button>
+      <button class="btn" onclick="show(10)">RSVP ✦</button>
     </div>
   </section>
 
-  <section class="page p3" id="page9">
+  <section class="page p3" id="page10">
     <div class="panel">
       <h2>JOIN THE MAGIC</h2><div class="gold"></div>
       <p class="sub">We'd love to celebrate Riley's 7th birthday with you!</p>
@@ -188,11 +224,12 @@ h1{font-size:clamp(34px,8vw,62px)}h2{font-size:clamp(28px,6vw,44px)}h3{font-size
       <div id="rsvpStatus" class="rsvp-status" aria-live="polite"></div>
       <div class="info"><b>EVENT</b>November 29, 2026 • 2:00 PM<br>Villa Maharlika Clubhouse</div>
       <button class="btn" onclick="maps()">📍 OPEN LOCATION</button>
-      <button class="btn" onclick="show(10)">MEMORY LANE ✦</button>
+      <button class="btn" onclick="show(11)">MEMORY LANE ✦</button>
+      <button class="btn" onclick="show(4)">🌸 MEET THE 7'S ✦</button>
     </div>
   </section>
 
-  <section class="page p2" id="page10">
+  <section class="page p2" id="page11">
     <div class="panel">
       <h2>MEMORY LANE</h2><div class="gold"></div>
       <p class="sub">A few favorite moments with Riley.</p>
@@ -201,11 +238,15 @@ h1{font-size:clamp(34px,8vw,62px)}h2{font-size:clamp(28px,6vw,44px)}h3{font-size
         <div class="photo"><img src="riley3.jpg"></div><div class="photo"><img src="riley5.jpg"></div>
         <div class="photo wide"><img src="riley4.jpg"></div>
       </div>
-      <button class="btn" onclick="show(11)">ONE LAST THING ✦</button>
+      <button class="btn" onclick="show(4)">🌸 MEET THE 7'S ✦</button>
+      <button class="btn" onclick="show(12)">ONE LAST THING ✦</button>
     </div>
   </section>
 
-  <section class="page p1 cover" id="page11">
+
+  
+
+  <section class="page p1 cover" id="page12">
     <div class="panel">
       <div class="spacer"></div>
       <h2>THANK YOU</h2><div class="gold"></div>
@@ -220,7 +261,7 @@ h1{font-size:clamp(34px,8vw,62px)}h2{font-size:clamp(28px,6vw,44px)}h3{font-size
   <div id="nav"><button onclick="prev()">‹</button><span id="dots"></span><button onclick="next()">›</button></div>
 </div>
 <script>
-let current=1,total=11;
+let current=1,total=12;
 function show(n){current=n;document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page'+n).classList.add('active');updateDots()}
 function updateDots(){let s='';for(let i=1;i<=total;i++)s+=i===current?'● ':'○ ';document.getElementById('dots').textContent=s.trim()}
 function next(){show(Math.min(total,current+1))}
