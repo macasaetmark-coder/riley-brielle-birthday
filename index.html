@@ -41,6 +41,7 @@ h1{font-size:clamp(34px,8vw,62px)}h2{font-size:clamp(28px,6vw,44px)}h3{font-size
 .rsvp-status.success{display:block;background:#f1e8f5;border:1px solid #b98cc8;color:#5b3270}
 .rsvp-status.error{display:block;background:#fff0f0;border:1px solid #d9a1a1;color:#8a3f3f}
 .small{font:12px Arial,sans-serif;text-align:center;opacity:.72}
+#guestCountGroup[hidden]{display:none}
 .back{position:absolute;top:12px;left:13px;border:0;background:#fff9;border-radius:18px;padding:7px 12px;color:#4e2a6c;cursor:pointer;z-index:2}
 #top{position:fixed;top:10px;right:10px;z-index:30;display:flex;gap:7px}
 .topbtn{border:0;border-radius:18px;padding:7px 11px;background:#fff9;color:#4e2a6c;font:700 12px Arial,sans-serif}
@@ -123,29 +124,28 @@ h1{font-size:clamp(34px,8vw,62px)}h2{font-size:clamp(28px,6vw,44px)}h3{font-size
   </section>
 
   <section class="page p2" id="page4">
-    <div class="panel"><button class="back" onclick="show(3)">← RSVP</button>
+    <div class="panel"><button class="back" onclick="show(5)">← LET'S CELEBRATE</button>
       <h2>THE 7'S</h2><div class="gold"></div>
       <p class="sub">Seven special people in each birthday tradition, celebrating Riley's magical 7th birthday.</p>
       <div class="sevens-grid">
         <div class="seven-card"><h3>🕯️ 7 CANDLES</h3><ol>
-          <li>Tita Nestle Sanchez</li><li>Tita May Tapia</li><li>Tita Jojie Hernandez</li><li>Sophie Alday</li><li>Hayley Recuerdo</li><li>Alexa Charm Velasco</li><li>Lolay Malou Bonita</li>
+          <li>Tita Nestle Sanchez</li><li>Tita May Tapia</li><li>Tita Jojie Hernandez</li><li>Blair Alday</li><li>Hayley Recuerdo</li><li>Alexa Charm Velasco</li><li>Lolay Malou Bonita</li>
         </ol></div>
         <div class="seven-card"><h3>💌 7 WISHES</h3><ol>
-          <li>Ate Brianna Jayne Sabalvaro</li><li>Ninang Sarrah Mercado</li><li>Tita Allen Leyesa</li><li>Jodee Mae Hernandez</li><li>Lola Ofelia Macasaet</li><li>Lola Norma Sabalvaro</li><li>Mama Jocelyn Sabalvaro</li>
+          <li>Ate Brianna Jayne Sabalvaro</li><li>Ninang Sarrah Mercado</li><li>Alexander Chase Exconde</li><li>Jodee Mae Hernandez</li><li>Lola Ofelia Macasaet</li><li>Lola Norma Sabalvaro</li><li>Mama Jocelyn Sabalvaro</li>
         </ol></div>
         <div class="seven-card"><h3>💎 7 TREASURES</h3><ol>
-          <li>Tita Tonette Villanueva</li><li>Lola Lita Exconde</li><li>Alexander Chase Exconde</li><li>Tita Mhau Alvarez</li><li>Ellie Alvarez</li><li>Blair Alday</li><li>Maria Lucia Elise Castromero</li>
+          <li>Tita Tonette Villanueva</li><li>Lola Lita Exconde</li><li>Tita Allen Leyesa</li><li>Lolay Annie Magnaye</li><li>Ellie Alvarez</li><li>Sophie Alday</li><li>Maria Lucia Elise Castromero</li>
         </ol></div>
         <div class="seven-card"><h3>💵 7 GREEN BILLS</h3><ol>
-          <li>Ninong Vinson Alday</li><li>Ninong Don2 Alvarez</li><li>Tita Claudette Alday</li><li>Ninong Paulo Mercado</li><li>Lolo Meo Guce</li><li>Tita Charmaine Sabalvaro</li><li>Ninang Analyn Sabalvaro</li>
+          <li>Ninong Vinson Alday</li><li>Ninong Don2 Alvarez</li><li>Lolay Benny Carpio</li><li>Ninong Paulo Mercado</li><li>Lolo Meo Guce</li><li>Tita Charmaine Sabalvaro</li><li>Ninang Analyn Sabalvaro</li>
         </ol></div>
         <div class="seven-card"><h3>🌹 7 ROSES</h3><ol>
           <li>Kuya Chant Alexis Velasco</li><li>Marc Caeli Disepeda</li><li>Kuya Kyle Alday</li><li>Kuya Gaj Alday</li><li>Lolo Clifford Macasaet</li><li>Lolo Pete Sabalvaro</li><li>Daddy Mark Anthony Macasaet</li>
         </ol></div>
       </div>
       <p class="quote">Thank you to the special people making Riley's seventh birthday unforgettable. 🦋</p>
-      <button class="btn" onclick="show(11)">HAPPY 7TH, RILEY! ✦</button>
-      <button class="btn" onclick="show(3)">BACK TO RSVP</button>
+      <button class="btn" onclick="show(10)">RSVP</button>
     </div>
   </section>
 
@@ -157,6 +157,7 @@ h1{font-size:clamp(34px,8vw,62px)}h2{font-size:clamp(28px,6vw,44px)}h3{font-size
       <button class="btn" onclick="show(7)">🍰 SWEET TREATS</button>
       <button class="btn" onclick="show(8)">🦋 BIRTHDAY SURPRISES</button>
       <button class="btn" onclick="show(9)">⭐ LOTS OF LAUGHTER</button>
+      <button class="btn" onclick="show(4)">🌸 MEET THE 7'S ✦</button>
       <p class="small">Tap a button to explore the celebration.</p>
     </div>
   </section>
@@ -194,7 +195,6 @@ h1{font-size:clamp(34px,8vw,62px)}h2{font-size:clamp(28px,6vw,44px)}h3{font-size
       <h2>LOTS OF LAUGHTER</h2><div class="gold"></div>
       <p class="sub">Most importantly, come ready to laugh, make new memories, and celebrate Riley's big 7th birthday!</p>
       <div class="photos"><div class="photo"><img src="riley1.jpg"></div><div class="photo"><img src="riley5.jpg"></div></div>
-      <button class="btn" onclick="show(10)">RSVP ✦</button>
     </div>
   </section>
 
@@ -210,10 +210,17 @@ h1{font-size:clamp(34px,8vw,62px)}h2{font-size:clamp(28px,6vw,44px)}h3{font-size
         <label class="field-label" for="attendance">WILL YOU BE JOINING US?</label>
         <select class="field" id="attendance" name="attendance" required>
           <option value="" selected disabled>Please choose one</option>
-          <option>💜 Yes! I'll be there!</option>
-          <option>🦋 Maybe — I'll let you know.</option>
-          <option>🌸 Sorry, I can't make it.</option>
+          <option value="Yes! I'll be there!">💜 Yes! I'll be there!</option>
+          <option value="Maybe — I'll let you know.">🦋 Maybe — I'll let you know.</option>
+          <option value="Sorry, I can't make it.">🌸 Sorry, I can't make it.</option>
         </select>
+        <div id="guestCountGroup" hidden>
+          <label class="field-label" for="guestCount">HOW MANY PEOPLE WILL BE ATTENDING?</label>
+          <input class="field" id="guestCount" name="guest_count" type="number"
+                 min="1" max="20" step="1" inputmode="numeric"
+                 placeholder="Enter number of guests">
+          <p class="small">Please include yourself in the total.</p>
+        </div>
         <label class="field-label" for="message">MESSAGE <span>(optional)</span></label>
         <textarea class="field message" id="message" name="message" rows="3" placeholder="Leave Riley a birthday message..."></textarea>
         <input type="hidden" name="_subject" value="Riley Brielle 7th Birthday — New RSVP">
@@ -225,7 +232,6 @@ h1{font-size:clamp(34px,8vw,62px)}h2{font-size:clamp(28px,6vw,44px)}h3{font-size
       <div class="info"><b>EVENT</b>November 29, 2026 • 2:00 PM<br>Villa Maharlika Clubhouse</div>
       <button class="btn" onclick="maps()">📍 OPEN LOCATION</button>
       <button class="btn" onclick="show(11)">MEMORY LANE ✦</button>
-      <button class="btn" onclick="show(4)">🌸 MEET THE 7'S ✦</button>
     </div>
   </section>
 
@@ -279,6 +285,22 @@ function updateDots(){let s='';for(let i=1;i<=total;i++)s+=i===current?'● ':'�
 function next(){show(Math.min(total,current+1))}
 function prev(){show(Math.max(1,current-1))}
 function home(){show(1)}
+const attendanceField = document.getElementById('attendance');
+const guestCountGroup = document.getElementById('guestCountGroup');
+const guestCountField = document.getElementById('guestCount');
+
+function syncGuestCountField(){
+  const attending = attendanceField.value === "Yes! I'll be there!";
+  guestCountGroup.hidden = !attending;
+  guestCountField.required = attending;
+  if(!attending) guestCountField.value = '';
+}
+attendanceField.addEventListener('change', syncGuestCountField);
+document.getElementById('rsvpForm').addEventListener('reset', () => {
+  guestCountGroup.hidden = true;
+  guestCountField.required = false;
+});
+
 async function submitRSVP(e){
   e.preventDefault();
   const form=e.target, button=document.getElementById('rsvpSubmit'), status=document.getElementById('rsvpStatus');
