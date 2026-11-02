@@ -11,7 +11,23 @@
 .page{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:18px;opacity:0;visibility:hidden;transform:translateX(24px);transition:opacity .45s,transform .45s}
 .page.active{opacity:1;visibility:visible;transform:none}
 .page:before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(1.02)}
-.p1:before{background-image:url("riley_cover.jpg");background-position:center center;background-size:contain;background-repeat:no-repeat;background-color:#24172e}.p2:before,.p3:before,.p4:before,.p5:before,.p6:before,.p7:before,.p8:before{background-image:url("bg2.png")}
+.p1:before{background-image:url("riley_cover.jpg");background-position:center center;background-size:contain;background-repeat:no-repeat;background-color:#24172e}
+.page:not(#page1):before{filter:brightness(.82) saturate(1.12)}
+#page2:before{background-image:linear-gradient(rgba(31,10,50,.17),rgba(31,10,50,.17)),url("bg4.png");background-position:center 28%}
+#page3:before{background-image:linear-gradient(rgba(31,10,50,.14),rgba(31,10,50,.14)),url("bg2.png");background-position:center}
+#page4:before{background-image:linear-gradient(rgba(31,10,50,.18),rgba(31,10,50,.18)),url("bg3.png");background-position:center}
+#page5:before{background-image:linear-gradient(rgba(31,10,50,.22),rgba(31,10,50,.22)),url("bg1.png");background-position:center 30%}
+#page6:before{background-image:linear-gradient(rgba(31,10,50,.18),rgba(31,10,50,.18)),url("bg4.png");background-position:center 44%}
+#page7:before{background-image:linear-gradient(rgba(31,10,50,.16),rgba(31,10,50,.16)),url("bg2.png");background-position:center 35%}
+#page8:before{background-image:linear-gradient(rgba(31,10,50,.2),rgba(31,10,50,.2)),url("bg1.png");background-position:center 64%}
+#page9:before{background-image:linear-gradient(rgba(31,10,50,.18),rgba(31,10,50,.18)),url("bg3.png");background-position:center 68%}
+#page10:before{background-image:linear-gradient(rgba(31,10,50,.18),rgba(31,10,50,.18)),url("bg2.png");background-position:center}
+#page11:before{background-image:linear-gradient(rgba(31,10,50,.2),rgba(31,10,50,.2)),url("bg4.png");background-position:center 38%}
+#page12:before{background-image:linear-gradient(rgba(31,10,50,.17),rgba(31,10,50,.17)),url("bg1.png");background-position:center 30%}
+.page:not(#page1) .panel{background:rgba(255,249,246,.92);border-color:rgba(215,158,207,.95);box-shadow:0 18px 60px rgba(25,5,45,.35)}
+.thankyou .panel{background:rgba(255,249,246,.91);color:#4e2a6c;text-shadow:none}
+.thankyou h2{color:#4e2a6c}
+.thankyou .quote{color:#683b78!important}
 .panel{position:relative;width:min(94vw,560px);height:min(96dvh,930px);overflow:auto;border:2px solid rgba(199,155,75,.75);border-radius:28px;background:rgba(255,249,246,.86);box-shadow:0 18px 60px rgba(0,0,0,.4);padding:30px 24px}
 .cover .panel{background:transparent;color:transparent;text-shadow:none;border:0;box-shadow:none;overflow:hidden}.cover .panel h3,.cover .panel h1,.cover .panel h2,.cover .panel .gold,.cover .panel .sub,.cover .panel .spacer{display:none}.cover .panel .btn{position:absolute;left:6%;bottom:7%;width:88%;height:9%;margin:0;opacity:0;background:transparent;border:0;box-shadow:none;color:transparent;text-shadow:none}
 .hero .panel{background:rgba(255,249,246,.62);color:#4e2a6c;text-shadow:0 1px 2px rgba(255,255,255,.7);border-color:rgba(199,155,75,.8)}
@@ -264,11 +280,11 @@ h1{font-size:clamp(34px,8vw,62px)}h2{font-size:clamp(28px,6vw,44px)}h3{font-size
 
   
 
-  <section class="page p1 cover" id="page12">
+  <section class="page thankyou" id="page12">
     <div class="panel">
       <div class="spacer"></div>
       <h2>THANK YOU</h2><div class="gold"></div>
-      <p class="quote" style="color:white">May your seventh year be filled with wonder, kindness, laughter, and beautiful adventures.</p>
+      <p class="quote" style="color:#683b78">May your seventh year be filled with wonder, kindness, laughter, and beautiful adventures.</p>
       <h2>HAPPY 7TH, RILEY! 🦋</h2>
       <p class="sub">We can't wait to celebrate with you.</p>
       <div class="spacer"></div>
