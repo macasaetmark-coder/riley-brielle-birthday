@@ -177,6 +177,17 @@ body:has(#page3.active) .butterfly{
 @media(max-width:430px){
   .page:not(#page1) .panel{background:linear-gradient(155deg,rgba(255,249,252,.72),rgba(247,230,249,.76))}
 }
+
+/* Additional Memory Lane photos: compact four-image sheets, displayed as individual tiles */
+.memory-new{aspect-ratio:112/150;background-repeat:no-repeat;background-size:200% 200%;background-color:#fff9f6}
+.memory-new.s1{background-image:url("memory_sheet_1.webp")}
+.memory-new.s2{background-image:url("memory_sheet_2.webp")}
+.memory-new.s3{background-image:url("memory_sheet_3.webp")}
+.memory-new.s4{background-image:url("memory_sheet_4.webp")}
+.memory-new.p1{background-position:0% 0%}
+.memory-new.p2{background-position:100% 0%}
+.memory-new.p3{background-position:0% 100%}
+.memory-new.p4{background-position:100% 100%}
 </style>
 </head>
 <body>
@@ -371,6 +382,20 @@ body:has(#page3.active) .butterfly{
         <div class="photo"><img src="riley_extra_10.jpg" alt="Riley Brielle memory 10" loading="lazy"></div>
         <div class="photo"><img src="riley_extra_11.jpg" alt="Riley Brielle memory 11" loading="lazy"></div>
         <div class="photo"><img src="riley_extra_12.jpg" alt="Riley Brielle memory 12" loading="lazy"></div>
+      <div class="photo memory-new s1 p1" role="img" aria-label="Riley Brielle memory 1" loading="lazy"></div>
+        <div class="photo memory-new s1 p2" role="img" aria-label="Riley Brielle memory 2" loading="lazy"></div>
+        <div class="photo memory-new s1 p3" role="img" aria-label="Riley Brielle memory 3" loading="lazy"></div>
+        <div class="photo memory-new s1 p4" role="img" aria-label="Riley Brielle memory 4" loading="lazy"></div>
+        <div class="photo memory-new s2 p1" role="img" aria-label="Riley Brielle memory 5" loading="lazy"></div>
+        <div class="photo memory-new s2 p2" role="img" aria-label="Riley Brielle memory 6" loading="lazy"></div>
+        <div class="photo memory-new s2 p3" role="img" aria-label="Riley Brielle memory 7" loading="lazy"></div>
+        <div class="photo memory-new s2 p4" role="img" aria-label="Riley Brielle memory 8" loading="lazy"></div>
+        <div class="photo memory-new s3 p1" role="img" aria-label="Riley Brielle memory 9" loading="lazy"></div>
+        <div class="photo memory-new s3 p2" role="img" aria-label="Riley Brielle memory 10" loading="lazy"></div>
+        <div class="photo memory-new s3 p3" role="img" aria-label="Riley Brielle memory 11" loading="lazy"></div>
+        <div class="photo memory-new s3 p4" role="img" aria-label="Riley Brielle memory 12" loading="lazy"></div>
+        <div class="photo memory-new s4 p1" role="img" aria-label="Riley Brielle memory 13" loading="lazy"></div>
+        <div class="photo memory-new s4 p2" role="img" aria-label="Riley Brielle memory 14" loading="lazy"></div>
       </div>
       <button class="btn" onclick="show(4)">🌸 MEET THE 7'S ✦</button>
       <button class="btn" onclick="show(12)">ONE LAST THING ✦</button>
