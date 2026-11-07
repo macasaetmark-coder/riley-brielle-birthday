@@ -414,7 +414,7 @@ const guestCountGroup = document.getElementById('guestCountGroup');
 const guestCountField = document.getElementById('guestCount');
 
 function syncGuestCountField(){
-  const attending = attendanceField.value === "Yes! I'll be there!";
+  const attending = attendanceField.value === "Yes";
   guestCountGroup.hidden = !attending;
   guestCountField.required = attending;
   if(!attending) guestCountField.value = '';
