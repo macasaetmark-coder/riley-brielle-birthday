@@ -329,7 +329,7 @@ body:has(#page3.active) .butterfly{
     <div class="panel">
       <h2>JOIN THE MAGIC</h2><div class="gold"></div>
       <p class="sub">We'd love to celebrate Riley's 7th birthday with you!</p>
-      <form id="rsvpForm" action="https://formsubmit.co/macasaetmark@gmail.com" method="POST">
+      <form id="rsvpForm" action="https://script.google.com/macros/s/AKfycbxQUTS2MNn6hMBUQIQMyvE3ZeN59fH-SeWaY1dwCVzahsY0RU6bnulxNJv0z036yg5G8Q/exec" method="POST" target="rsvpFrame">
         <label class="field-label" for="guestName">YOUR NAME</label>
         <input class="field" id="guestName" name="name" type="text" placeholder="Your full name" required>
         <label class="field-label" for="guestEmail">YOUR EMAIL <span>(optional)</span></label>
@@ -337,24 +337,22 @@ body:has(#page3.active) .butterfly{
         <label class="field-label" for="attendance">WILL YOU BE JOINING US?</label>
         <select class="field" id="attendance" name="attendance" required>
           <option value="" selected disabled>Please choose one</option>
-          <option value="Yes! I'll be there!">💜 Yes! I'll be there!</option>
-          <option value="Maybe — I'll let you know.">🦋 Maybe — I'll let you know.</option>
-          <option value="Sorry, I can't make it.">🌸 Sorry, I can't make it.</option>
+          <option value="Yes">💜 Yes! I'll be there!</option>
+          <option value="Maybe">🦋 Maybe — I'll let you know.</option>
+          <option value="No">🌸 Sorry, I can't make it.</option>
         </select>
         <div id="guestCountGroup" hidden>
           <label class="field-label" for="guestCount">HOW MANY PEOPLE WILL BE ATTENDING?</label>
-          <input class="field" id="guestCount" name="guest_count" type="number"
+          <input class="field" id="guestCount" name="guests" type="number"
                  min="1" max="20" step="1" inputmode="numeric"
                  placeholder="Enter number of guests">
           <p class="small">Please include yourself in the total.</p>
         </div>
         <label class="field-label" for="message">MESSAGE <span>(optional)</span></label>
         <textarea class="field message" id="message" name="message" rows="3" placeholder="Leave Riley a birthday message..."></textarea>
-        <input type="hidden" name="_subject" value="Riley Brielle 7th Birthday — New RSVP">
-        <input type="hidden" name="_cc" value="jocelyn_sabalvaro@yahoo.com">
-        <input type="hidden" name="_template" value="table">
         <button class="btn" id="rsvpSubmit" type="submit">💌 SEND RSVP</button>
       </form>
+      <iframe name="rsvpFrame" id="rsvpFrame" title="RSVP submission" style="display:none"></iframe>
       <div id="rsvpStatus" class="rsvp-status" aria-live="polite"></div>
       <div class="info"><b>EVENT</b>November 29, 2026 • 2:00 PM<br>Villa Maharlika Clubhouse</div>
       <button class="btn" onclick="maps()">📍 OPEN LOCATION</button>
@@ -425,6 +423,30 @@ attendanceField.addEventListener('change', syncGuestCountField);
 document.getElementById('rsvpForm').addEventListener('reset', () => {
   guestCountGroup.hidden = true;
   guestCountField.required = false;
+});
+
+const rsvpForm = document.getElementById('rsvpForm');
+const rsvpStatus = document.getElementById('rsvpStatus');
+let rsvpPending = false;
+rsvpForm.addEventListener('submit', () => {
+  rsvpPending = true;
+  rsvpStatus.textContent = 'Sending your RSVP…';
+  rsvpStatus.className = 'rsvp-status';
+  document.getElementById('rsvpSubmit').disabled = true;
+});
+window.addEventListener('message', (event) => {
+  if (!rsvpPending || typeof event.data !== 'string') return;
+  let result;
+  try { result = JSON.parse(event.data); } catch (_) { return; }
+  if (result.type !== 'rsvp-response') return;
+  rsvpPending = false;
+  document.getElementById('rsvpSubmit').disabled = false;
+  rsvpStatus.textContent = result.message || (result.success ? 'RSVP received!' : 'Unable to send RSVP. Please try again.');
+  rsvpStatus.className = result.success ? 'rsvp-status success' : 'rsvp-status error';
+  if (result.success) {
+    rsvpForm.reset();
+    syncGuestCountField();
+  }
 });
 
 function maps(){let q=encodeURIComponent('Villa Maharlika Clubhouse, Villa Maharlika Subdivision, Lanzones Street, San Jose, Batangas');window.open('https://www.google.com/maps/search/?api=1&query='+q,'_blank')}
