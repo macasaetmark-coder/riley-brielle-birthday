@@ -329,7 +329,7 @@ body:has(#page3.active) .butterfly{
     <div class="panel">
       <h2>JOIN THE MAGIC</h2><div class="gold"></div>
       <p class="sub">We'd love to celebrate Riley's 7th birthday with you!</p>
-      <form id="rsvpForm" onsubmit="submitRSVP(event)">
+      <form id="rsvpForm" action="https://formsubmit.co/macasaetmark@gmail.com" method="POST">
         <label class="field-label" for="guestName">YOUR NAME</label>
         <input class="field" id="guestName" name="name" type="text" placeholder="Your full name" required>
         <label class="field-label" for="guestEmail">YOUR EMAIL <span>(optional)</span></label>
@@ -353,7 +353,6 @@ body:has(#page3.active) .butterfly{
         <input type="hidden" name="_subject" value="Riley Brielle 7th Birthday — New RSVP">
         <input type="hidden" name="_cc" value="jocelyn_sabalvaro@yahoo.com">
         <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_url" value="https://macasaetmark-coder.github.io/riley-brielle-birthday/">
         <button class="btn" id="rsvpSubmit" type="submit">💌 SEND RSVP</button>
       </form>
       <div id="rsvpStatus" class="rsvp-status" aria-live="polite"></div>
@@ -428,35 +427,6 @@ document.getElementById('rsvpForm').addEventListener('reset', () => {
   guestCountField.required = false;
 });
 
-async function submitRSVP(e){
-  e.preventDefault();
-  const form=e.target, button=document.getElementById('rsvpSubmit'), status=document.getElementById('rsvpStatus');
-  button.disabled=true; button.textContent='SENDING... ✦'; status.textContent='';
-  const data=new FormData(form);
-  try{
-    const response=await fetch('https://formsubmit.co/ajax/macasaetmark@gmail.com',{
-      method:'POST',
-      headers:{'Accept':'application/json'},
-      body:data
-    });
-    const result=await response.json();
-    if(String(result.success).toLowerCase()==='true'){
-      form.reset();
-      syncGuestCountField();
-      status.className='rsvp-status success';
-      status.textContent="✨ Thank you! Your RSVP has been sent. We can't wait to celebrate with you! 🦋";
-    }else{
-      status.className='rsvp-status error';
-      status.textContent=result.message || "We couldn't send the RSVP. Please try again.";
-    }
-  }catch(err){
-    status.className='rsvp-status error';
-    status.textContent="Connection problem. Please check your internet connection and try again.";
-    console.error('RSVP submission error:',err);
-  }finally{
-    button.disabled=false; button.textContent='💌 SEND RSVP';
-  }
-}
 function maps(){let q=encodeURIComponent('Villa Maharlika Clubhouse, Villa Maharlika Subdivision, Lanzones Street, San Jose, Batangas');window.open('https://www.google.com/maps/search/?api=1&query='+q,'_blank')}
 document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')next();if(e.key==='ArrowLeft')prev()})
 updateDots()
